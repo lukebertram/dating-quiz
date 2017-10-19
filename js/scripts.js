@@ -18,6 +18,7 @@ $(document).ready(function(){
       date3Score++;
     } else {
       //no entry
+      $("");
     }
     //answer 2 branches
     if (answer2 === "option1") {
@@ -50,7 +51,9 @@ $(document).ready(function(){
       //no entry
     }
     //determine highscore
-    if (date1Score > date2Score && date1Score > date3Score){
+    if (date1Score === date2Score && date2Score === date3Score && date1Score === 0){
+      $("#fail").show();
+    } else if (date1Score > date2Score && date1Score > date3Score){
       $("#date1-card").show();
     } else if (date2Score > date1Score && date2Score > date3Score){
       $("#date2-card").show();

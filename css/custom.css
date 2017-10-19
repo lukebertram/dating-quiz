@@ -1,3 +1,7 @@
 .hidden {
   display: none;
 }
+
+.result, .card {
+  margin-top: 2em;
+}
